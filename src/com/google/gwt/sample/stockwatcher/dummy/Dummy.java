@@ -28,11 +28,14 @@ public class Dummy {
 
 	public void halfValue() {
 		initialValue = initialValue >> 2;
-
 		print();
 	}
 	
-	public print(String message) {
+	public void toFinalValue() {
+		initialValue = this.finalValue;
+	}
+	
+	public void print(String message) {
         System.out.println(message);
         System.out.println("This class is a Dummy class.");
     }
@@ -49,8 +52,9 @@ public class Dummy {
 	}
 
 	public static void main(String[] args) {
-		Dummy d = new Dummy(1);
-		d.Double();
+		Dummy d = new Dummy(1, 2);
+		d.doubleValue();
+		
 
 		System.out.println(d);
 
