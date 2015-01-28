@@ -15,6 +15,10 @@ public class Dummy {
 	public Dummy(int initialValue, int finalValue) {
 		this(initialValue, finalValue, true);
 	}
+	
+	public Dummy() {
+	    this(42,-1,false);
+	}
 
 	public void doubleValue() {
 		initialValue = initialValue + initialValue;
@@ -23,10 +27,15 @@ public class Dummy {
 	}
 
 	public void halfValue() {
-		initialValue = initialValue / 2;
+		initialValue = initialValue >> 2;
 
 		print();
 	}
+	
+	public print(String message) {
+        System.out.println(message);
+        System.out.println("This class is a Dummy class.");
+    }
 
 	private void print() {
 
