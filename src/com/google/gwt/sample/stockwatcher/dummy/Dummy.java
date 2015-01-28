@@ -23,9 +23,13 @@ public class Dummy {
 	}
 
 	public void halfValue() {
-		initialValue = initialValue / 2;
-
+		Double newValue = new Double( initialValue * 0.5);
+		initialValue = newValue.intValue();
 		print();
+	}
+	
+	public void toFinalValue() {
+		initialValue = this.finalValue;
 	}
 
 	private void print() {
@@ -40,8 +44,9 @@ public class Dummy {
 	}
 
 	public static void main(String[] args) {
-		Dummy d = new Dummy(1);
-		d.Double();
+		Dummy d = new Dummy(1, 2);
+		d.doubleValue();
+		
 
 		System.out.println(d);
 
